@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi 14 de febrero</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Sección Especial (Primero visible) -->
+    <div id="especial" class="section">
+        <section class="estruc">
+            <div class="frase">"Tu haces que mi vida, sea mucho mejor, con cada beso, abrazo y caricia a tu lado" 💘</div>
+            <div class="img1">
+                <img src="https://t3.ftcdn.net/jpg/05/42/93/02/360_F_542930201_ulqtnEOLNr4lWFJsUHB0HMHI4W1w5apb.jpg" alt="" class="img01">
+            </div>
+            <button onclick="showRomantico()" class="button1">Toca aquí para ver la sorpresa!</button>
+        </section>
+    </div>
+
+    <!-- Sección Romántica (Oculta al inicio) -->
+    <div id="romantico" class="section hidden">
+        <div class="container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJpa9LVWHlQjMWARqT5rjRH7z-vp8bOxMQXw&s" alt="Pareja abrazándose" class="background">
+            <div class="text">
+                <p>¿Quieres ser mi 14 de febrero<br> y mi 365 días del año<br> por muchos años?</p>
+                <p class="highlight">(Porque yo sí quiero)</p>
+            </div>
+            <button onclick="goBack()" class="back-button">Volver</button>
+        </div>
+    </div>
+
+    <script>
+        function showRomantico() {
+            document.getElementById("especial").classList.add("hidden");
+            document.getElementById("romantico").classList.remove("hidden");
+        }
+
+        function goBack() {
+            document.getElementById("romantico").classList.add("hidden");
+            document.getElementById("especial").classList.remove("hidden");
+        }
+    </script>
+
+</body>
+</html>
